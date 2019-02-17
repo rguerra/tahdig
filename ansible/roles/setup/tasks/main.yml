@@ -14,18 +14,20 @@
   apt:
     name:
       - curl
-      - python-pip
+      - python3-pip
       - systemd
     state: present
     update_cache: yes
   tags:
     - system
 
-# Import docker tasks
-- name: Import docker tasks
+# Import setup tasks
+- name: Import setup tasks
   include_tasks: "{{ item }}"
   with_items:
     - docker.yml
+    - airflow.yml
+    - jenkins.yml
   tags:
     - system
  

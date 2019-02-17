@@ -1,8 +1,8 @@
 resource "digitalocean_droplet" "www-1" {
-    image = "ubuntu-14-04-x64"
+    image = "ubuntu-18-04-x64"
     name = "www-1"
     region = "nyc3"
-    size = "512mb"
+    size = "s-4vcpu-8gb"
     private_networking = true
     ssh_keys = [
       "${var.ssh_fingerprint}"
