@@ -5,5 +5,7 @@
   docker_container:
     name: airflow
     image: puckel/docker-airflow
+    ports:
+      - "8880:8080"
   tags:
     - airflow
