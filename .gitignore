@@ -2,3 +2,7 @@
 Makefile
 set_env.sh
 .terraform/
+terraform.tfstate
+*.retry
+purgatory/*
+*.backup
