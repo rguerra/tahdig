@@ -1,0 +1,14 @@
+---
+# This playbook contains airflow actions that will be run on "remote" host.
+
+- name: pull airflow image
+  docker_image:
+    name: puckel/docker-airflow
+  tags:
+    - airflow
+- name: Start a container and use an env file
+  docker_container:
+    name: airflow
+    image: puckel/docker-airflow
+  tags:
+    - airflow
